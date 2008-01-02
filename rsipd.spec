@@ -13,6 +13,7 @@ Requires(pre):	rpm-helper
 Requires(post):	rpm-helper
 BuildRequires:	libstdc++-devel >= 3.0
 BuildRequires:	openslp-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 RSIP is a new protocol which may be an alternative to the NAT/PAT.
