@@ -1,4 +1,4 @@
-Summary:	RSIP is a new protocol which may be an alternative to the NAT/PAT
+Summary:	New protocol which may be an alternative to the NAT/PAT
 Name:		rsipd
 Version:	0.9.3
 Release:	%mkrel 9
