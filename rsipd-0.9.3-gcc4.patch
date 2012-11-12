@@ -1,0 +1,78 @@
+Index: src/listener.h
+===================================================================
+--- src/listener.h
++++ src/listener.h	2006-08-10 10:18:32.000000000 +0200
+@@ -144,5 +144,7 @@
+ 	friend void runListener(Listener*);   // The EP manager thread
+ 
+ };
++	
++void runListener(Listener*);
+ 
+ #endif
+Index: src/protocolHdlr.h
+===================================================================
+--- src/protocolHdlr.h
++++ src/protocolHdlr.h	2006-08-10 10:18:58.000000000 +0200
+@@ -132,5 +132,7 @@
+ 	// The main thread
+ 
+ };
++	
++void* threadProcess(ProtocolHandler*);
+ 
+ #endif
+Index: src/proxy.cpp
+===================================================================
+--- src/proxy.cpp
++++ src/proxy.cpp	2006-08-10 10:28:37.000000000 +0200
+@@ -388,8 +388,8 @@
+ 	}
+ 
+ 
+-	pthread_cleanup_pop(1)
+-	pthread_cleanup_pop(1)
++	pthread_cleanup_pop(1);
++	pthread_cleanup_pop(1);
+ }
+ 
+ 
+Index: src/proxy.h
+===================================================================
+--- src/proxy.h
++++ src/proxy.h	2006-08-10 10:27:26.000000000 +0200
+@@ -239,4 +239,9 @@
+ 
+ };
+ 
++void removeOldICMP(Proxy* p);
++void removeOldFragID(Proxy* p);
++
++void router(Proxy* p);
++
+ #endif
+Index: src/rsipClient.h
+===================================================================
+--- src/rsipClient.h
++++ src/rsipClient.h	2006-08-10 10:25:38.000000000 +0200
+@@ -365,6 +365,9 @@
+ 	
+ };
+ 
++void checkRegistering(RSIPClient::TimerParam* p);
++void removeClient(RSIPClient::TimerParam* p);
++void checkAssignments(RSIPClient::TimerParam* p);
+ 
+ #endif
+ 
+Index: src/timer.h
+===================================================================
+--- src/timer.h
++++ src/timer.h	2006-08-10 10:26:13.000000000 +0200
+@@ -97,4 +97,5 @@
+ 	friend void runTimer(Timer*);   // The timer thread
+ };
+ 
++void runTimer(Timer* t);
+ #endif
+

@@ -1,0 +1,22 @@
+diff -Naur rsipd-0.9.3/src/proxy.h rsipd-0.9.3.oden/src/proxy.h
+--- rsipd-0.9.3/src/proxy.h	2002-09-25 09:29:41.000000000 +0200
++++ rsipd-0.9.3.oden/src/proxy.h	2003-07-10 21:01:28.000000000 +0200
+@@ -74,6 +74,7 @@
+ #include "address.h"
+ #include "interval.h"
+ #include "fragid.h"
++#include "assert.h"
+ 
+ // This code is a RSIP proxy which routes messages destined to RSIP hosts
+ // according to the port from which messages are coming from.
+diff -Naur rsipd-0.9.3/src/tunnel.h rsipd-0.9.3.oden/src/tunnel.h
+--- rsipd-0.9.3/src/tunnel.h	2002-09-25 09:29:41.000000000 +0200
++++ rsipd-0.9.3.oden/src/tunnel.h	2003-07-10 20:58:53.000000000 +0200
+@@ -58,6 +58,7 @@
+ #include "arp.h"
+ #include "proxy.h"
+ #include "address.h"
++#include "assert.h"
+ 
+ #ifndef TUNNEL_IP_IP
+ #define TUNNEL_IP_IP 1
