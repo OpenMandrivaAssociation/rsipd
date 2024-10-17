@@ -4,7 +4,7 @@ Version:	0.9.3
 Release:	%mkrel 14
 License:	GPL
 Group:		System/Servers
-URL:		http://rsip.info.ucl.ac.be/
+URL:		https://rsip.info.ucl.ac.be/
 Source0:	http://rsip.info.ucl.ac.be/downloads/server/latest/Sources/%{name}-%{version}.src.tar.bz2
 Patch0:		rsipd.patch
 Patch1:		rsipd-0.9.3-assert.patch
