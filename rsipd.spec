@@ -11,6 +11,7 @@ Patch1:		rsipd-0.9.3-assert.patch
 Patch2:		rsipd-0.9.3-gcc4.patch
 Requires(pre):	rpm-helper
 Requires(post):	rpm-helper
+BuildRequires:	make
 BuildRequires:	libstdc++-devel >= 3.0
 BuildRequires:	openslp-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
