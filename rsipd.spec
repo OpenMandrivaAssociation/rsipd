@@ -1,7 +1,7 @@
 Summary:	New protocol which may be an alternative to the NAT/PAT
 Name:		rsipd
 Version:	0.9.3
-Release:	%mkrel 14
+Release:	15
 License:	GPL
 Group:		System/Servers
 URL:		https://rsip.info.ucl.ac.be/
